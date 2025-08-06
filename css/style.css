@@ -1,0 +1,215 @@
+@charset 'utf-8';
+/* web-font */
+/* @font-face {
+    font-family: 'Gyeonggi_Batang_Regular';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/2410-3@1.0/Batang_Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Gyeonggi_Title_Medium';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/2410-3@1.0/Title_Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+} */
+
+html,
+body,
+div,
+span,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+em,
+img,
+small,
+strong,
+b,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tr,
+th,
+td,
+article,
+aside,
+footer,
+header,
+nav,
+section,
+summary,
+video,
+* {
+    padding: 0;
+    margin: 0;
+}
+ul,ol{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    color: inherit;
+}
+body,
+html {
+    /* Prevent font scaling in landscape */
+
+    -webkit-text-size-adjust: none;
+    /*Chrome, Safari, newer versions of Opera*/
+
+    -moz-text-size-adjust: none;
+    /*Firefox*/
+
+    -ms-text-size-adjust: none;
+    /*Ie*/
+
+    -o-text-size-adjust: none;
+    /*old versions of Opera*/
+}
+
+body{
+    font-family: "Noto Sans Kr";
+    font-size: 13px;
+    line-height: 28px;
+    color: black;
+}
+
+#header {
+    width: 1320px;
+    margin: 0 auto;
+    padding: 20px 0;
+    height: 150px;
+    box-sizing: border-box;
+    position: relative;
+}
+
+.inner-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.logo {
+    display: flex;
+    justify-content: center;
+    transform: translateX(-40%);
+}
+
+.search {
+    position: absolute;
+    right: 200px; 
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.mypage {
+    position: absolute;
+    right: 50px;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+}
+
+.shopping {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+}
+
+.gnb {
+    padding: 20px 0;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.gnb li a{
+    display: block;
+    font-size: 15px;
+    font-weight: bold;
+    color: #001994;
+}
+
+.gnb li:nth-child(1) a:hover {
+    color: red;
+}
+
+.gnb li:nth-child(2) a:hover {
+    color: orange;
+}
+
+.gnb li:nth-child(3) a:hover {
+    color: rgb(82, 255, 82);
+}
+
+.gnb li:nth-child(4) a:hover {
+    color: rgb(0, 68, 255);
+}
+
+.gnb li:nth-child(5) a:hover {
+    color: #8e2bff;
+}
+
+#main-banner {
+    /* height: 800px; */
+    overflow: hidden;
+}
+
+.slides {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.slides img {
+    width: 100%;
+    display: block;
+}
+
+#slogan {
+    position: relative; 
+    width: 100%; 
+}
+
+#slogan img{
+    display: block;
+}
+
+.inner-slogan {
+    width: 1320px;
+    margin: 0 auto;
+    position: absolute;
+    top: 50%; 
+    left: 50%;
+    transform: translate(-50%, -50%); 
+    text-align: center;
+    pointer-events: none;
+    width: 100%;
+}
+
+#slogan h1 {
+    font-family: '경기천년바탕';
+    color: white; 
+    font-size: 45px;
+    font-weight: bold;
+}
+
