@@ -61,13 +61,17 @@ video,
     padding: 0;
     margin: 0;
 }
-ul,ol{
+
+ul,
+ol {
     list-style: none;
 }
-a{
+
+a {
     text-decoration: none;
     color: inherit;
 }
+
 body,
 html {
     /* Prevent font scaling in landscape */
@@ -85,7 +89,7 @@ html {
     /*old versions of Opera*/
 }
 
-body{
+body {
     font-family: "Noto Sans Kr";
     font-size: 13px;
     line-height: 28px;
@@ -116,7 +120,7 @@ body{
 
 .search {
     position: absolute;
-    right: 200px; 
+    right: 200px;
     top: 50%;
     transform: translateY(-50%);
 }
@@ -143,7 +147,7 @@ body{
     justify-content: space-evenly;
 }
 
-.gnb li a{
+.gnb li a {
     display: block;
     font-size: 15px;
     font-weight: bold;
@@ -173,6 +177,13 @@ body{
 #main-banner {
     /* height: 800px; */
     overflow: hidden;
+    width: 1920px;
+    position: relative;
+}
+
+#banner-wrap {
+    display: flex;
+    justify-content: center;
 }
 
 .slides {
@@ -186,11 +197,14 @@ body{
 }
 
 #slogan {
-    position: relative; 
-    width: 100%; 
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
 }
 
-#slogan img{
+#slogan img {
     display: block;
 }
 
@@ -198,9 +212,9 @@ body{
     width: 1320px;
     margin: 0 auto;
     position: absolute;
-    top: 50%; 
+    top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%); 
+    transform: translate(-50%, -50%);
     text-align: center;
     pointer-events: none;
     width: 100%;
@@ -208,8 +222,220 @@ body{
 
 #slogan h1 {
     font-family: '경기천년바탕';
-    color: white; 
+    color: white;
     font-size: 45px;
     font-weight: bold;
 }
 
+#brand-section {
+    padding: 100px;
+    display: flex;
+    width: 1320px;
+    margin: 0 auto;
+    justify-content: space-evenly;
+    box-sizing: border-box;
+}
+
+.main-logo {
+    width: 200px;
+    margin-bottom: 50px;
+    margin-left: 70px;
+}
+
+.sub-logo {
+    width: 70%;
+    margin-top: 150px;
+    text-align: center;
+}
+
+.about-logo,
+.brand-story {
+    font-family: "Noto Sans KR", sans-serif;
+    font-size: 16px;
+    line-height: 1.7;
+    color: #333;
+}
+
+.brand-story {
+    margin-top: 20px;
+}
+
+.about-logo h3,
+.brand-story h3 {
+    font-family: "경기천년바탕";
+    font-size: 30px;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+#product {
+    width: 1320px;
+    margin: 0 auto;
+    height: 700px;
+    display: flex;
+    justify-content: space-evenly;
+    box-sizing: border-box;
+}
+
+.tag-card {
+    width: 315px;
+    height: 520px;
+    perspective: 1000px;
+    cursor: pointer;
+    position: relative;
+}
+
+.card-inner {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transition: transform 0.8s ease;
+    transform-style: preserve-3d;
+}
+
+.tag-card:hover .card-inner {
+    transform: rotateY(180deg);
+}
+
+.card-face {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    box-sizing: border-box;
+    overflow: hidden;
+    background-color: white;
+    backface-visibility: hidden;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-front .product {
+    margin-top: 150px;
+    width: 70%;
+    height: auto;
+    z-index: 2;
+    transition: opacity 0.4s ease;
+}
+
+.card-front .bg,
+.card-back .bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 315px;
+    height: 520px;
+    object-fit: contain;
+    z-index: 0;
+}
+
+.card-front .bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    z-index: 1;
+}
+
+.card-front .product {
+    margin-top: 150px;
+    width: 70%;
+    height: auto;
+    z-index: 2;
+    transition: opacity 0.4s ease;
+}
+
+.tag-card:hover .product {
+    opacity: 0;
+}
+
+.card-front,
+.card-back {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    overflow: hidden;
+    background-color: white;
+    backface-visibility: hidden;
+    box-sizing: border-box;
+    padding: 0;
+}
+
+.card-back {
+    transform: rotateY(180deg);
+    text-align: center;
+    overflow-y: auto;
+}
+
+.card-back .bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    z-index: 0;
+    transform: rotateY(180deg);
+}
+
+.card-back {
+    transform: rotateY(180deg);
+    padding: 20px;
+    box-sizing: border-box;
+    z-index: 1;
+    text-align: center;
+    overflow-y: auto;
+}
+
+.text-content {
+    margin-top: 150px;
+    position: relative;
+    z-index: 99;
+    max-height: 360px;
+}
+
+
+.card-back h3 {
+    font-family: '경기천년바탕';
+    font-weight: bold;
+    font-size: 20px;
+    margin-bottom: 8px;
+}
+
+.card-back h4 {
+    font-family: "경기천년바탕";
+    font-weight: bold;
+    font-size: 16px;
+    margin-bottom: 12px;
+}
+
+.card-back p {
+    font-weight: light;
+    font-size: 15px;
+    line-height: 18px;
+}
+
+.product-detail {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.product-detail h3{
+    font-style: "경기천년제목";
+    font-weight: bold;
+    font-size: 30px;
+    margin-bottom: 30px;
+}
+
+.product-detail p {
+    font-weight: regular;
+    font-size: 20px;
+}
