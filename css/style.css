@@ -462,6 +462,7 @@ placeholder {
 }
 
 .slider-container {
+    padding: 50px 0;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -524,6 +525,14 @@ placeholder {
     background-color: #9a94f7;
     width: 220px;
     height: 220px;
+    position: absolute;
+    top: 180px;
+}
+
+.active-title {
+    position: absolute;
+    bottom: 160px;
+    left: 46%;
 }
 
 .img-circle img {
@@ -550,7 +559,7 @@ placeholder {
 
 .dots {
     position: absolute;
-    bottom: 120px;
+    bottom: 100px;
     left: 50%;
     transform: translateX(-50%);
     display: flex;
