@@ -7,6 +7,7 @@
     <title>달茶</title>
     <link rel="shortcut icon" href="images/header/logo.svg" type="image/x-icon">
     <link rel="stylesheet" href="css/style.css">
+
 </head>
 
 <body>
@@ -17,7 +18,10 @@
                     <img src="images/header/logo.svg" alt="logo">
                 </div>
                 <div class="search">
-                    <img src="images/header/search.svg" alt="search">
+                    <form action="/search" method="GET">
+                        <input type="text" name="query" placeholder="">
+                        <button type="submit">검색</button>
+                    </form>
                 </div>
                 <div class="mypage">
                     <a href="#"><img src="images/header/my.svg" alt="mypage"></a></li>
@@ -157,11 +161,62 @@
                     <p>BLUBERRY <br> TEA </p>
                 </div>
             </div>
-
         </div>
 
-    </div>
+        <div id="recommend">
+            <h1>Today's Recommend</h1>
+            <div class="slider-container">
+                <button class="arrow left"><img src="images/recommend/arrow-left.svg" alt=""></button>
 
+                <ul class="slide-list">
+                    <li class="slide">
+                        <div class="img-circle">
+                            <img src="images/recommend/plastic.svg" alt="Blueberry Tea">
+                        </div>
+                        <p class="slide-title">BLUEBERRY<br>TEA</p>
+                    </li>
+
+                    <li class="slide">
+                        <div class="img-circle">
+                            <img src="images/recommend/package01.svg" alt="Chamomile Tea">
+                        </div>
+                        <p class="slide-title">CHAMOMILE<br>TEA</p>
+                    </li>
+
+                    <li class="slide active">
+                        <div class="img-circle active-circle">
+                            <img src="images/recommend/package02.svg" alt="Chrysanthemum Tea">
+                        </div>
+                        <p class="slide-title active-title">CHRYSANTHEMUM<br>TEA</p>
+                    </li>
+
+                    <li class="slide">
+                        <div class="img-circle">
+                            <img src="images/recommend/package03.svg" alt="Lemon Ginger Tea">
+                        </div>
+                        <p class="slide-title">LEMON GINGER<br>TEA</p>
+                    </li>
+                    
+                    <li class="slide">
+                        <div class="img-circle">
+                            <img src="images/recommend/teabox.svg" alt="Lavender & Chamomile Tea">
+                        </div>
+                        <p class="slide-title">LAVENDER<br>& <br>CHAMOMILE<br>TEA</p>
+                    </li>
+                </ul>
+
+                <button class="arrow right"><img src="images/recommend/arrow-right.svg" alt=""></button>
+
+                <div class="dots">
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot active"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <script src="http://code.jquery.com/jquery-latest.min.js"></script>
     <script src="js/script.js"></script>

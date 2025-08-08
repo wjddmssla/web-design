@@ -119,10 +119,15 @@ body {
 }
 
 .search {
+    border-radius: 10px;
     position: absolute;
     right: 200px;
     top: 50%;
     transform: translateY(-50%);
+}
+
+placeholder {
+    text-align: right;
 }
 
 .mypage {
@@ -163,15 +168,15 @@ body {
 }
 
 .gnb li:nth-child(3) a:hover {
-    color: rgb(82, 255, 82);
+    color: rgb(51, 141, 51);
 }
 
 .gnb li:nth-child(4) a:hover {
-    color: rgb(0, 68, 255);
+    color: rgb(0, 153, 255);
 }
 
 .gnb li:nth-child(5) a:hover {
-    color: #8e2bff;
+    color: #7700ff;
 }
 
 #main-banner {
@@ -397,11 +402,10 @@ body {
 
 .text-content {
     margin-top: 150px;
-    position: relative;
+    /* position: relative; */
     z-index: 99;
     max-height: 360px;
 }
-
 
 .card-back h3 {
     font-family: '경기천년바탕';
@@ -428,7 +432,7 @@ body {
     margin-top: 50px;
 }
 
-.product-detail h3{
+.product-detail h3 {
     font-style: "경기천년제목";
     font-weight: bold;
     font-size: 30px;
@@ -438,4 +442,131 @@ body {
 .product-detail p {
     font-weight: regular;
     font-size: 20px;
+}
+
+#recommend {
+    width: 1320px;
+    margin: 0 auto;
+    padding: 100px 0;
+    text-align: center;
+    position: relative;
+    height: 600px;
+    box-sizing: border-box;
+}
+
+#recommend h1 {
+    font-style: "경기천년제목";
+    font-weight: bold;
+    font-size: 30px;
+    margin-bottom: 30px;
+}
+
+.slider-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.arrow {
+    flex: 0 0 50px;
+    border: none;
+    background: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.arrow img {
+    width: 100%;
+}
+
+.arrow.left {
+    margin-right: 20px;
+}
+
+.arrow.right {
+    margin-left: 20px;
+}
+
+.slide-list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.slide {
+    text-align: center;
+    width: 160px;
+    height: 160px;
+    align-items: center;
+}
+
+.slide.active {
+    width: 220px;
+}
+
+.img-circle {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background-color: #dddbe8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto 10px auto;
+    transition: background-color 0.3s ease, width 0.3s ease, height 0.3s ease;
+    overflow: hidden;
+}
+
+.slide.active .img-circle {
+    background-color: #9a94f7;
+    width: 220px;
+    height: 220px;
+}
+
+.img-circle img {
+    width: 80px;
+    height: auto;
+    object-fit: contain;
+    user-select: none;
+    pointer-events: none;
+}
+
+.slide-title {
+    font-size: 12px;
+    line-height: 1.2;
+    color: #000;
+    font-weight: 400;
+    user-select: none;
+    transition: font-weight 0.3s ease, color 0.3s ease;
+}
+
+.slide.active .slide-title {
+    font-weight: 600;
+    color: #1a1a1a;
+}
+
+.dots {
+    position: absolute;
+    bottom: 120px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 10px;
+    user-select: none;
+}
+
+.dot {
+    width: 12px;
+    height: 12px;
+    background-color: #dddbe8;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.dot.active {
+    background-color: #9a94f7;
 }
