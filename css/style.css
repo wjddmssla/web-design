@@ -580,6 +580,27 @@ placeholder {
     background-color: #9a94f7;
 }
 
+/* best */
+#best {
+    width: 1320px;
+    margin: 0 auto;
+    height: 700px;
+    text-align: center;
+}
+
+#best h1{
+    margin-top: 20px;
+    font-size: 30px;
+    font-weight: bold;
+    font-family: "경기천년제목";
+    margin-bottom: 50px;
+}
+
+.best-product {
+    display: flex;
+    justify-content: space-evenly;
+}
+
 /* gift */
 
 #gift {
@@ -604,74 +625,188 @@ placeholder {
     font-family: "경기천년제목";
 }
 
-#gift .gift-product,
-#gift .gift-presentation {
-    position: relative;
+.inner-gift ul p{
+    font-size: 18px;
+    font-weight: regulear;
 }
 
-#gift .gift-product>h1,
-#gift .gift-presentation>h1 {
-    margin: 20px 0 24px;
-    font-size: 30px;
-    font-weight: 700;
-    font-family: "경기천년제목", sans-serif;
-    letter-spacing: 0.02em;
+.gift-product ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 100px;
 }
 
-#gift .product-grid {
-    display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: clamp(32px, 6vw, 120px);
-    place-items: center;
-    margin-top: 24px;
+.gift-presentation {
+    margin-top: 100px;
 }
 
-#gift .cloud-card {
-    display: grid;
-    gap: 12px;
-    justify-items: center;
-    width: clamp(280px, 36vw, 480px);
-}
-
-#gift .cloud-frame {
+.gift-presentation ul{
     width: 100%;
-    aspect-ratio: 5 / 3;
-    background: url(../images/gift/cloud.svg) no-repeat center / contain;
-    display: grid;
-    place-items: center;
-    padding: clamp(8px, 2vw, 24px);
+    display: flex;
+    justify-content: space-evenly;
 }
 
-#gift .product-img {
-    max-width: 80%;
-    max-height: 80%;
-    object-fit: contain;
+/* news */
+#news {
+    height: 800px;
+    width: 1320px;
+    margin: 0 auto;
+    box-sizing: border-box;
+    padding: 100px 0;
+    text-align: center;
 }
 
-#gift .product-name {
-    font-weight: 700;
-    line-height: 1.2;
+#news h1{
+    font-style: "경기천년제목";
+    font-weight: bold;
+    font-size: 30px;
+    margin-bottom: 70px;
 }
 
-#gift .rainbow-banner {
+#news ul {
+    display: flex;
+    justify-content: space-evenly;
+
+}
+
+#news ul li{
+    width: 540px;
+    height: 440px;
+}
+
+#news ul li img{
+    width: 100%;
+}
+
+/* instagram */
+#instagram {
+    width: 1320px;
+    margin: 0 auto;
+    height: 600px;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+#instagram h1 {
+    font-style: "경기천년제목";
+    font-weight: bold;
+    font-size: 30px;
+    margin-bottom: 70px;
+}
+
+#instagram ul{
+    display: flex;
+    justify-content: space-between;
+}
+
+#instagram ul li{
+    width: 247px;
+    height: 350px;
+    border: 1px solid #C4BEBE;
+}
+
+#instagram ul li img{
+    width: 100%;
+}
+
+/* video */
+/* 추후 추가 예정 */
+
+#video {
+    width: 1320px;
+    margin: 0 auto;
+    text-align: center;
+    height: 1000px;
+    box-sizing: border-box;
+    padding-top: 100px;
+}
+
+#video h1{
+    font-style: "경기천년제목";
+    font-weight: bold;
+    font-size: 30px;
+    margin-bottom: 70px;
+}
+
+.mp4 {
+    background-color: #D9D9D9;
+    width: 1320px;
+    height: 690px;
+}
+
+/* sns */
+#sns {
+    width: 1320px;
+    height: 400px;
+    box-sizing: border-box;
+    margin: 0 auto;
+    text-align: center;
+    padding: 50px 0;
+}
+
+#sns h1{
+    font-style: "경기천년제목";
+    font-weight: bold;
+    font-size: 30px;
+    margin-bottom: 70px;
+}
+
+#sns ul{
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+#sns ul li a{
     display: block;
-    width: min(800px, 80%);
-    height: auto;
-    margin: 28px auto 0;
 }
 
-#gift .presentation-grid {
-    list-style: none;
-    padding: 0;
-    margin: 24px 0 0;
-    display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: clamp(24px, 4vw, 56px);
-    place-items: end;
+#footer {
+    background-image: url(../images/footer/foot-bg.svg);
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
-#gift .presentation-item img {
-    width: clamp(120px, 12vw, 180px);
-    height: auto;
+.inner-footer {
+    width: 1320px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    color: white;   
+    height: 250px;
+}
+
+.foot-logo{
+    display: flex;
+    width: 50%;
+    align-items: center;
+}
+
+.information{
+    display: flex;
+    justify-content: space-between;
+    width: 60%;
+}
+
+.information-text{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    font-size: 15px;
+    font-weight: regular;
+}
+
+.ask {
+    color: white;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 40%;
+}
+
+.ask li a{
     display: block;
+    font-size: 20px;
 }
