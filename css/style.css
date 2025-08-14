@@ -601,6 +601,12 @@ placeholder {
     justify-content: space-evenly;
 }
 
+.best1:hover, .best2:hover {
+    opacity: 70%;
+    cursor: pointer;
+}
+
+
 /* gift */
 
 #gift {
