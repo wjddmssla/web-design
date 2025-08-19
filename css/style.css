@@ -588,7 +588,7 @@ placeholder {
     text-align: center;
 }
 
-#best h1{
+#best h1 {
     margin-top: 20px;
     font-size: 30px;
     font-weight: bold;
@@ -601,9 +601,89 @@ placeholder {
     justify-content: space-evenly;
 }
 
-.best1:hover, .best2:hover {
-    opacity: 70%;
+.best-card {
+    position: relative;
     cursor: pointer;
+}
+
+.best-img {
+    display: block;
+    width: 100%;
+    height: auto;
+    transition: opacity 0.5s ease;
+}
+
+.product-img {
+    position: absolute;
+    top: 55%;
+    left: 51%;
+    transform: translate(-50%, -50%);
+    transition: opacity 0.5s ease;
+    z-index: 1;
+}
+
+.best-card:hover .product-img {
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.best-text {
+    position: absolute;
+    top: 0;
+    left: -22px;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 20px;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+.best1 h2 {
+    color: #362789;
+    font-weight: bold;
+    font-family: "경기천년바탕";
+    font-size: 25px;
+}
+
+.best1 p {
+    font-weight: light;
+    color: #070C1A;
+    font-size: 15px;
+}
+
+.best2 h2 {
+    color: #681F3B;
+    font-weight: bold;
+    font-family: "경기천년바탕";
+    font-size: 25px;
+}
+
+.best2 p {
+    font-weight: light;
+    color: #4A1515;
+    font-size: 15px;
+}
+
+.best-text h2 {
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+
+.best-text p {
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.best-card:hover .best-bg {
+    opacity: 60%;
+}
+
+.best-card:hover .best-text {
+    opacity: 1;
 }
 
 
@@ -631,12 +711,12 @@ placeholder {
     font-family: "경기천년제목";
 }
 
-.inner-gift ul p{
+.inner-gift ul p {
     font-size: 18px;
     font-weight: regulear;
 }
 
-.gift-product ul{
+.gift-product ul {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -654,7 +734,7 @@ placeholder {
     margin-top: 100px;
 }
 
-.gift-presentation ul{
+.gift-presentation ul {
     width: 100%;
     display: flex;
     justify-content: space-evenly;
@@ -670,7 +750,7 @@ placeholder {
     text-align: center;
 }
 
-#news h1{
+#news h1 {
     font-style: "경기천년제목";
     font-weight: bold;
     font-size: 30px;
@@ -682,12 +762,12 @@ placeholder {
     justify-content: space-evenly;
 }
 
-#news ul li{
+#news ul li {
     width: 540px;
     height: 440px;
 }
 
-#news ul li img{
+#news ul li img {
     width: 100%;
 }
 
@@ -707,18 +787,18 @@ placeholder {
     margin-bottom: 70px;
 }
 
-#instagram ul{
+#instagram ul {
     display: flex;
     justify-content: space-between;
 }
 
-#instagram ul li{
+#instagram ul li {
     width: 247px;
     height: 350px;
     border: 1px solid #C4BEBE;
 }
 
-#instagram ul li img{
+#instagram ul li img {
     width: 100%;
 }
 
@@ -734,7 +814,7 @@ placeholder {
     padding-top: 100px;
 }
 
-#video h1{
+#video h1 {
     font-style: "경기천년제목";
     font-weight: bold;
     font-size: 30px;
@@ -757,20 +837,20 @@ placeholder {
     padding: 50px 0;
 }
 
-#sns h1{
+#sns h1 {
     font-style: "경기천년제목";
     font-weight: bold;
     font-size: 30px;
     margin-bottom: 70px;
 }
 
-#sns ul{
+#sns ul {
     display: flex;
     justify-content: center;
     gap: 30px;
 }
 
-#sns ul li a{
+#sns ul li a {
     display: block;
 }
 
@@ -785,23 +865,23 @@ placeholder {
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
-    color: white;   
+    color: white;
     height: 250px;
 }
 
-.foot-logo{
+.foot-logo {
     display: flex;
     width: 50%;
     align-items: center;
 }
 
-.information{
+.information {
     display: flex;
     justify-content: space-between;
     width: 60%;
 }
 
-.information-text{
+.information-text {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -818,7 +898,7 @@ placeholder {
     width: 40%;
 }
 
-.ask li a{
+.ask li a {
     display: block;
     font-size: 20px;
 }
