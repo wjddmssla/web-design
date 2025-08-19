@@ -643,6 +643,13 @@ placeholder {
     gap: 100px;
 }
 
+/* .gift-product ul li:nth-child(1) {
+    background-image: url(../images/gift/product-bg.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100%;
+} */
+
 .gift-presentation {
     margin-top: 100px;
 }
@@ -673,7 +680,6 @@ placeholder {
 #news ul {
     display: flex;
     justify-content: space-evenly;
-
 }
 
 #news ul li{
