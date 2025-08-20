@@ -702,10 +702,12 @@ placeholder {
     margin: 0 auto;
     text-align: center;
     padding: 100px 0;
+    position: relative;
 }
 
 .inner-gift h1 {
     margin-top: 20px;
+    margin-bottom: 50px;
     font-size: 30px;
     font-weight: bold;
     font-family: "경기천년제목";
@@ -723,12 +725,40 @@ placeholder {
     gap: 100px;
 }
 
-/* .gift-product ul li:nth-child(1) {
-    background-image: url(../images/gift/product-bg.svg);
-    background-repeat: no-repeat;
-    background-position: center;
-    width: 100%;
-} */
+.gift-product ul li{
+    cursor: pointer;
+}
+
+.gift-product ul li p {
+    cursor: auto;
+}
+
+
+.rainbow {
+    position: absolute;
+    right: -150px;
+    top: 530px;
+}
+
+.gift-product ul li:hover .gift-hover {
+    opacity: 1;
+    cursor: auto;
+}
+
+.gift-hover {
+    position: absolute;
+    opacity: 0;
+}
+
+.detail {
+    top: 80px;
+    left: 0;
+}
+
+.detail2 {
+    top: 80px;
+    right: 0;
+}
 
 .gift-presentation {
     margin-top: 100px;
