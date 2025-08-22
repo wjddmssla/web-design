@@ -11,15 +11,15 @@ setInterval(() => {
 
 // recommend
 const products = [
-  { img: "images/recommend/plastic.svg", title: "BLUEBERRY<br>TEA" },
-  { img: "images/recommend/package01.svg", title: "CHAMOMILE<br>TEA" },
-  { img: "images/recommend/package02.svg", title: "CHRYSANTHEMUM<br>TEA" },
-  { img: "images/recommend/package03.svg", title: "LEMON GINGER<br>TEA" },
-  { img: "images/recommend/teabox.svg", title: "LAVENDER &<br>CHAMOMILE<br>TEA" }
+  { img: "../images/recommend/plastic.svg", title: "BLUEBERRY<br>TEA" },
+  { img: "../images/recommend/package01.svg", title: "CHAMOMILE<br>TEA" },
+  { img: "../images/recommend/package02.svg", title: "CHRYSANTHEMUM<br>TEA" },
+  { img: "../images/recommend/package03.svg", title: "LEMON GINGER<br>TEA" },
+  { img: "../images/recommend/teabox.svg", title: "LAVENDER &<br>CHAMOMILE<br>TEA" }
 ];
 
 const recommend = document.querySelector('#recommend');
-const slots = recommend.querySelectorAll('.slot');         // 5개 고정
+const slots = recommend.querySelectorAll('.slot');         
 const leftBtn = recommend.querySelector('.arrow.left');
 const rightBtn = recommend.querySelector('.arrow.right');
 const dotsWrap = recommend.querySelector('.dots');
