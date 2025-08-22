@@ -101,7 +101,8 @@ body {
 }
 
 #main-wrap {
-    padding-top: 150px; /* header 높이 + 여유 20px */
+    min-width: 1400px;
+    padding-top: 150px; 
 }
 
 /* header */
