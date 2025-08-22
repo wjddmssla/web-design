@@ -11,11 +11,11 @@ setInterval(() => {
 
 // recommend
 const products = [
-  { img: "../images/recommend/plastic.png", title: "BLUEBERRY<br>TEA" },
-  { img: "../images/recommend/package01.png", title: "CHAMOMILE<br>TEA" },
-  { img: "../images/recommend/package02.png", title: "CHRYSANTHEMUM<br>TEA" },
-  { img: "../images/recommend/package03.png", title: "LEMON GINGER<br>TEA" },
-  { img: "../images/recommend/teabox.png", title: "LAVENDER &<br>CHAMOMILE<br>TEA" }
+  { img: "./images/recommend/plastic.png", title: "BLUEBERRY<br>TEA" },
+  { img: "./images/recommend/package01.png", title: "CHAMOMILE<br>TEA" },
+  { img: "./images/recommend/package02.png", title: "CHRYSANTHEMUM<br>TEA" },
+  { img: "./images/recommend/package03.png", title: "LEMON GINGER<br>TEA" },
+  { img: "./images/recommend/teabox.png", title: "LAVENDER &<br>CHAMOMILE<br>TEA" }
 ];
 
 const recommend = document.querySelector('#recommend');
