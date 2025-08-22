@@ -89,6 +89,10 @@ html {
     /*old versions of Opera*/
 }
 
+html {
+    scroll-padding-top: 150px; /* header 높이만큼 */
+}
+
 body {
     font-family: "Noto Sans Kr";
     font-size: 13px;
@@ -96,14 +100,26 @@ body {
     color: black;
 }
 
+#main-wrap {
+    padding-top: 150px; /* header 높이 + 여유 20px */
+}
+
 /* header */
+.header-wrap {
+    position: fixed;    
+    top: 0;
+    left: 0;
+    width: 100%;      
+    background-color: white; 
+    z-index: 1000;     
+}
+
 #header {
-    width: 1320px;
-    margin: 0 auto;
-    padding: 20px 0;
+    width: 1320px;      /* 기존 디자인 너비 */
+    margin: 0 auto;     /* 중앙 정렬 */
     height: 150px;
+    padding: 20px 0;
     box-sizing: border-box;
-    position: relative;
 }
 
 .inner-header {
@@ -444,6 +460,15 @@ placeholder {
     font-size: 20px;
 }
 
+/* recommend */
+:root {
+    --d-small: 160px;
+    --d-big: 220px;
+    --gap: 20px;
+    --c-small: #dddbe8;
+    --c-big: #9a94f7;
+}
+
 #recommend {
     width: 1320px;
     margin: 0 auto;
@@ -462,122 +487,123 @@ placeholder {
 }
 
 .slider-container {
-    padding: 50px 0;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+}
+
+.slot {
+    width: var(--d-big);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.slots {
+    display: flex;
+    gap: var(--gap);
+    align-items: flex-start;
+    position: relative;
+    z-index: 5;
+    align-items: center;
+    height: 300px;
+}
+
+.circle {
+    width: var(--d-small);
+    height: var(--d-small);
+    border-radius: 50%;
+    background: var(--c-small);
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 20px;
+}
+
+.slot.center .circle {
+    width: var(--d-big);
+    height: var(--d-big);
+    background: var(--c-big);
+}
+
+.circle img {
+    width: 80px;
+    transition: transform 0.3s ease;
+}
+
+@keyframes pop {
+    0% {
+        transform: scale(1);
+    }
+
+    30% {
+        transform: scale(1.5);
+    }
+
+    60% {
+        transform: scale(1.3);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+.slot.center .circle img.pop {
+    animation: pop 0.4s ease;
+}
+
+.caption {
+    margin-top: 12px;
+    line-height: 1.2;
+    color: #000;
+    text-align: center;
 }
 
 .arrow {
-    flex: 0 0 50px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 50px;
+    height: 50px;
     border: none;
     background: none;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    cursor: pointer;
+    z-index: 10;
+}
+
+.arrow.left {
+    left: 0;
+}
+
+.arrow.right {
+    right: 0;
 }
 
 .arrow img {
     width: 100%;
 }
 
-.arrow.left {
-    margin-right: 20px;
-}
-
-.arrow.right {
-    margin-left: 20px;
-}
-
-.slide-list {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 20px;
-}
-
-.slide {
-    text-align: center;
-    width: 160px;
-    height: 160px;
-    align-items: center;
-}
-
-.slide.active {
-    width: 220px;
-}
-
-.img-circle {
-    width: 100%;
-    height: 100%;
-    border-radius: 50%;
-    background-color: #dddbe8;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 0 auto 10px auto;
-    transition: background-color 0.3s ease, width 0.3s ease, height 0.3s ease;
-    overflow: hidden;
-}
-
-.slide.active .img-circle {
-    background-color: #9a94f7;
-    width: 220px;
-    height: 220px;
-    position: absolute;
-    top: 180px;
-}
-
-.active-title {
-    position: absolute;
-    bottom: 160px;
-    left: 46%;
-}
-
-.img-circle img {
-    width: 80px;
-    height: auto;
-    object-fit: contain;
-    user-select: none;
-    pointer-events: none;
-}
-
-.slide-title {
-    font-size: 12px;
-    line-height: 1.2;
-    color: #000;
-    font-weight: 400;
-    user-select: none;
-    transition: font-weight 0.3s ease, color 0.3s ease;
-}
-
-.slide.active .slide-title {
-    font-weight: 600;
-    color: #1a1a1a;
-}
-
 .dots {
     position: absolute;
-    bottom: 100px;
+    bottom: 80px;
     left: 50%;
     transform: translateX(-50%);
     display: flex;
+    justify-content: center;
     gap: 10px;
-    user-select: none;
 }
 
 .dot {
     width: 12px;
     height: 12px;
-    background-color: #dddbe8;
+    background: #dddbe8;
     border-radius: 50%;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
 }
 
 .dot.active {
-    background-color: #9a94f7;
+    background: #9a94f7;
 }
 
 /* best */
@@ -732,7 +758,6 @@ placeholder {
 .gift-product ul li p {
     cursor: auto;
 }
-
 
 .rainbow {
     position: absolute;
