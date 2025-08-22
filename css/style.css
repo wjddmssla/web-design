@@ -103,6 +103,7 @@ body {
 #main-wrap {
     min-width: 1400px;
     padding-top: 150px; 
+    overflow-x: hidden;
 }
 
 /* header */
