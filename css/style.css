@@ -301,7 +301,8 @@ placeholder {
     height: 700px;
     display: flex;
     justify-content: space-evenly;
-    box-sizing: border-box;
+    /* box-sizing: border-box; */
+    padding: 50px 0;
 }
 
 .tag-card {
@@ -614,6 +615,7 @@ placeholder {
     margin: 0 auto;
     height: 700px;
     text-align: center;
+    padding: 50px 0;
 }
 
 #best h1 {
@@ -835,6 +837,7 @@ placeholder {
     height: 600px;
     box-sizing: border-box;
     text-align: center;
+    padding: 50px 0;
 }
 
 #instagram h1 {
