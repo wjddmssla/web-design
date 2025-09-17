@@ -881,8 +881,8 @@ placeholder {
     margin-bottom: 70px;
 }
 
-.mp4 {
-    background-color: #D9D9D9;
+#video video {
+    border: 1px solid black;
     width: 1320px;
     height: 690px;
 }
